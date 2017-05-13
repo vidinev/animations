@@ -1,0 +1,9 @@
+<div *ngFor="let candy of bigCandies; let i = index"
+     class="candy-container"
+     [@fallCandy]="candy.state"
+     (@fallCandy.done)="reInit(candy, 'state')">
+  <div [@rotateCandy]="candy.rotateState"
+       (@rotateCandy.done)="reInit(candy, 'rotateState')"
+       class="candy c{{i}}"
+       [ngStyle]="candy.style"></div>
+</div>
