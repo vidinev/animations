@@ -1,9 +1,62 @@
+$red-button-background: transparentize(#ffafaf, 0.2);
+$red-button-text: #701212;
+
+$blue-button-background: transparentize(#28c8dc, 0.2);
+$blue-button-text: #114b70;
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: url(assets/img/sky.jpg) repeat;
   padding: 0;
   margin: 0;
+  font-size: 14px;
+  font-family: 'Ubuntu', sans-serif;
+  overflow: hidden;
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: "NautilusPompilius";
+  src: url(assets/fonts/NautilusPompiliusRegular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.button {
+  border: none;
+  margin: 20px;
+  padding: 15px 25px;
+  border-radius: 6px;
+  font: bold 16px 'Ubuntu', sans-serif;
+  box-shadow: 0 0 20px 0 transparentize(#154d71, 0.8);
+  cursor: pointer;
+  will-change: transform;
+  &.red {
+    background-color: $red-button-background;
+    color: $red-button-text;
+    &:hover, &:active, &:focus {
+      background-color: lighten($red-button-background, 6);
+    }
+  }
+  &.blue {
+    background-color: $blue-button-background;
+    color: $blue-button-text;
+    &:hover, &:active, &:focus {
+      background-color: lighten($blue-button-background, 8);
+    }
+  }
+}
+
+.button, .click-able {
+  &:hover, &:active, &:focus {
+    transform: scale(1.05);
+    transition: all 0.15s ease-in-out;
+  }
+}
+
+.text-center {
+  text-align: center;
 }

@@ -1,0 +1,98 @@
+:host {
+  display: block;
+  .main-title {
+    font-size: 80px;
+    text-align: center;
+    letter-spacing: 0.075em;
+    color: rgba(0, 60, 98, 0.9);
+    font-family: "NautilusPompilius", sans-serif;
+  }
+  .sub-title {
+    font-size: 24px;
+    text-align: center;
+    color: #154d71;
+  }
+  .main-title, .sub-title {
+    > span {
+      display: inline-block;
+    }
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    &.auth-open {
+      width: 70%;
+      float: right;
+    }
+  }
+  .icon-button {
+    font-size: 32px;
+    color: #0b2f46;
+    cursor: pointer;
+  }
+  .auth-panel {
+    position: relative;
+    width: 30%;
+    background: transparentize(#0d4970, 0.3);
+    height: 100vh;
+    padding: 25px 25px 25px 50px;
+    margin-left: -25px;
+    float: left;
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 100vh 15vh 0 0;
+      border-color: rgba(13, 73, 112, 0.7) transparent transparent transparent;
+      position: absolute;
+      top: 0;
+      right: -15vh;
+      z-index: -1;
+    }
+    &:before {
+      content: "";
+      width: 360px;
+      height: 400px;
+      position: absolute;
+      right: calc(-85px - 15vh);
+      background: url(../../assets/img/st.png) no-repeat;
+      background-size: cover;
+      transform: rotate(-15deg);
+      top: 10px;
+    }
+  }
+  .auth-title {
+    margin: 10px;
+    color: #0b2f46;
+    font-size: 36px;
+    font-family: "NautilusPompilius", sans-serif;
+    text-align: center;
+  }
+  .form-control {
+    padding: 15px 0;
+    input {
+      padding: 8px 12px;
+      font-size: 16px;
+      background: rgb(161, 205, 254);;
+      border: beige;
+      border-radius: 4px;
+      width: 100%;
+      box-shadow: 0 0 20px 0 transparentize(#154d71, 0.8);
+      color: #0b2f46;
+      font-weight: bold;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .fa-sign-in, .fa-user-plus {
+    color: #fff;
+    align-self: flex-end;
+  }
+}
