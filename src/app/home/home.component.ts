@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {animate, state, style, transition, trigger} from '@angular/animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { slideToRight } from '../routing-animation.constant';
+import { GlobalService } from '../global.service';
 
-const animationStartDelay = 500;
+const animationStartDelay = 600;
 const animation = '280ms cubic-bezier(0.6,-0.1, 0.85, 1.3)';
 
 @Component({
@@ -9,6 +11,7 @@ const animation = '280ms cubic-bezier(0.6,-0.1, 0.85, 1.3)';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   animations: [
+    slideToRight(),
     trigger('flyIn', [
       state('in', style({transform: 'scale(1) translateY(0)', opacity: 1})),
       transition('void => *', [
@@ -37,37 +40,38 @@ const animation = '280ms cubic-bezier(0.6,-0.1, 0.85, 1.3)';
         animate(animation)
       ])
     ])
-  ]
+  ],
+  host: {
+    '[@slideToRight]': '',
+  }
 })
 export class HomeComponent implements OnInit {
-  titleState;
-  subTitleState;
-  authButtonsState;
-  loginOpen = 'out';
-  registrationOpen = 'out';
-  authOpen = 'out';
+
+  constructor(public global: GlobalService) {
+  }
+
   ngOnInit() {
-    setTimeout(() => this.titleState = 'in', animationStartDelay);
-    this.authButtonsState = 'hidden';
+    setTimeout(() => this.global.titleState = 'in', animationStartDelay);
+    this.global.authButtonsState = 'hidden';
   }
 
   showElement(name) {
-    this[name] = 'in';
+    this.global[name] = 'in';
   }
 
   openLogin() {
-    this.authOpen = 'in';
-    this.loginOpen = 'in';
-    this.registrationOpen = 'out';
+    this.global.authOpen = 'in';
+    this.global.loginOpen = 'in';
+    this.global.registrationOpen = 'out';
   }
 
   openRegistration() {
-    this.authOpen = 'in';
-    this.registrationOpen = 'in';
-    this.loginOpen = 'out';
+    this.global.authOpen = 'in';
+    this.global.registrationOpen = 'in';
+    this.global.loginOpen = 'out';
   }
 
   closeAuth() {
-    this.authOpen = 'out';
+    this.global.authOpen = 'out';
   }
 }

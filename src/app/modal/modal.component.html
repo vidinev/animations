@@ -1,0 +1,43 @@
+<div class="modal-overlay" [@overlayAction]="opacityState" (@overlayAction.done)="overlayAnimationFinish($event)">
+  <div class="modal"
+       [@modalAction]="modalState"
+       (@modalAction.done)="modalAnimationFinish($event)"
+       [class.success]="isSuccess">
+    <div class="fa fa-close" (click)="closeModal()"></div>
+    <div class="modal-main" *ngIf="!isSuccess">
+      <h4 class="modal-title">Доставка конфет</h4>
+      <div class="modal-sub-title">Заказ не может быть отменён</div>
+      <div class="order-wrapper">
+        <div class="item-wrapper">
+          <img src="../../assets/img/candy3.png">
+          <div class="price">100$</div>
+        </div>
+        <div class="item-wrapper">
+          <img src="../../assets/img/candy4.png">
+          <div class="price">150$</div>
+        </div>
+        <div class="item-wrapper">
+          <img src="../../assets/img/candy5.png">
+          <div class="price">220$</div>
+        </div>
+        <div class="item-wrapper">
+          <img src="../../assets/img/candy6.png">
+          <div class="price">50$</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="button red" type="button" (click)="cancel()">
+          Отменить
+        </button>
+        <button class="button blue" type="button" (click)="pay()">
+          Оплатить
+        </button>
+      </div>
+    </div>
+    <div class="modal-success" *ngIf="isSuccess">
+      <h4 class="modal-title">Оплата успешна!</h4>
+      <i class="fa fa-check"></i>
+    </div>
+
+  </div>
+</div>

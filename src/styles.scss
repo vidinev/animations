@@ -29,7 +29,7 @@ body {
   border: none;
   margin: 20px;
   padding: 15px 25px;
-  border-radius: 6px;
+  border-radius: 4px;
   font: bold 16px 'Ubuntu', sans-serif;
   box-shadow: 0 0 20px 0 transparentize(#154d71, 0.8);
   cursor: pointer;
@@ -51,6 +51,7 @@ body {
 }
 
 .button, .click-able {
+  cursor: pointer;
   &:hover, &:active, &:focus {
     transform: scale(1.05);
     transition: all 0.15s ease-in-out;

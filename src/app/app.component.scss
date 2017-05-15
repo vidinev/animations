@@ -1,0 +1,42 @@
+:host {
+  header {
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow:  0 0 20px 0 transparentize(#154d71, 0.9);
+    > a {
+      text-decoration: none;
+    }
+  }
+
+
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    margin-right: 15px;
+  }
+
+  .logo-title {
+    display: inline-block;
+    font-size: 32px;
+    letter-spacing: 0.075em;
+    color: rgba(0, 60, 98, 0.9);
+    font-family: "NautilusPompilius", sans-serif;
+    margin: 0;
+    text-decoration: none;
+  }
+
+  .fa-shopping-bag {
+    color: rgba(0, 60, 98, 0.9);
+    margin-left: auto;
+    font-size: 32px;
+  }
+}

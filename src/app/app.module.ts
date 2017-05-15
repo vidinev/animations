@@ -9,12 +9,17 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CandiesComponent } from './home/candies/candies.component';
 import { CandiesService } from './home/candies/candies.service';
+import { ShopComponent } from './shop/shop.component';
+import { ModalComponent } from './modal/modal.component';
+import { GlobalService } from './global.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CandiesComponent
+    CandiesComponent,
+    ShopComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +29,8 @@ import { CandiesService } from './home/candies/candies.service';
     AppRoutingModule
   ],
   providers: [
-    CandiesService
+    CandiesService,
+    GlobalService
   ],
   bootstrap: [AppComponent]
 })

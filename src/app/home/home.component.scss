@@ -1,9 +1,13 @@
 :host {
   display: block;
+  position: absolute;
+  width: 100%;
+
   .main-title {
     font-size: 80px;
     text-align: center;
     letter-spacing: 0.075em;
+    margin-top: -80px;
     color: rgba(0, 60, 98, 0.9);
     font-family: "NautilusPompilius", sans-serif;
   }
@@ -65,8 +69,8 @@
     }
   }
   .auth-title {
-    margin: 10px;
-    color: #0b2f46;
+    margin: -80px 10px 10px 10px;
+    color: #bee9ff;
     font-size: 36px;
     font-family: "NautilusPompilius", sans-serif;
     text-align: center;
@@ -94,5 +98,6 @@
   .fa-sign-in, .fa-user-plus {
     color: #fff;
     align-self: flex-end;
+    text-decoration: none;
   }
 }
