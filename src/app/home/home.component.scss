@@ -4,17 +4,19 @@
   width: 100%;
 
   .main-title {
-    font-size: 80px;
+    font-size: 85px;
     text-align: center;
     letter-spacing: 0.075em;
-    margin-top: -80px;
-    color: rgba(0, 60, 98, 0.9);
-    font-family: "NautilusPompilius", sans-serif;
+    margin-top: -60px;
+    color: darken(#184869, 5);
+    text-shadow: 0 0 8px transparentize(#2d92d5, .15);
+    margin-bottom: 20px;
   }
   .sub-title {
-    font-size: 24px;
+    font-size: 38px;
     text-align: center;
-    color: #154d71;
+    color: darken(#184869, 5);
+    text-shadow: 0 0 8px transparentize(#2d92d5, .15);
   }
   .main-title, .sub-title {
     > span {
@@ -72,7 +74,6 @@
     margin: -80px 10px 10px 10px;
     color: #bee9ff;
     font-size: 36px;
-    font-family: "NautilusPompilius", sans-serif;
     text-align: center;
   }
   .form-control {

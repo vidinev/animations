@@ -9,7 +9,7 @@ $blue-button-text: #114b70;
 }
 
 body {
-  background: url(assets/img/sky.jpg) repeat;
+  background: url(assets/img/sky.png) repeat;
   padding: 0;
   margin: 0;
   font-size: 14px;
@@ -34,18 +34,21 @@ body {
   box-shadow: 0 0 20px 0 transparentize(#154d71, 0.8);
   cursor: pointer;
   will-change: transform;
+  font-size: 24px;
   &.red {
-    background-color: $red-button-background;
-    color: $red-button-text;
+    background-color: #2d92d5;
+    color: #fff;
+    border: 2px solid $blue-button-text;
     &:hover, &:active, &:focus {
-      background-color: lighten($red-button-background, 6);
+      background-color: lighten(#2d92d5, 6);
     }
   }
   &.blue {
-    background-color: $blue-button-background;
+    background-color: #fff;
     color: $blue-button-text;
+    border: 2px solid $blue-button-text;
     &:hover, &:active, &:focus {
-      background-color: lighten($blue-button-background, 8);
+      background-color: darken(#fff, 4);
     }
   }
 }

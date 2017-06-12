@@ -3,9 +3,9 @@
     display: flex;
     align-items: center;
     padding: 0 25px;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.82);
-    box-shadow:  0 0 20px 0 transparentize(#154d71, 0.9);
+    height: 100px;
+    background: rgba(118, 200, 255, 0.8);
+    box-shadow: 0 0 20px 0 rgba(19, 58, 84, 0.25);
     > a {
       text-decoration: none;
     }
@@ -18,20 +18,18 @@
   }
 
   .logo {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
     background-size: cover;
     margin-right: 15px;
   }
 
   .logo-title {
     display: inline-block;
-    font-size: 32px;
-    letter-spacing: 0.075em;
-    color: rgba(0, 60, 98, 0.9);
-    font-family: "NautilusPompilius", sans-serif;
+    font-size: 42px;
     margin: 0;
     text-decoration: none;
+    color: #184869;
   }
 
   .fa-shopping-bag {
