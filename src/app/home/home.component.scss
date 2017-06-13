@@ -41,7 +41,7 @@
   .auth-panel {
     position: relative;
     width: 30%;
-    background: transparentize(#0d4970, 0.3);
+    background: rgba(45, 146, 213, 0.7);
     height: 100vh;
     padding: 25px 25px 25px 50px;
     margin-left: -25px;
@@ -52,7 +52,7 @@
       height: 0;
       border-style: solid;
       border-width: 100vh 15vh 0 0;
-      border-color: rgba(13, 73, 112, 0.7) transparent transparent transparent;
+      border-color: rgba(45, 146, 213, 0.7) transparent transparent transparent;
       position: absolute;
       top: 0;
       right: -15vh;
@@ -60,21 +60,23 @@
     }
     &:before {
       content: "";
-      width: 360px;
+      width: 300px;
       height: 400px;
       position: absolute;
-      right: calc(-85px - 15vh);
+      right: calc(-145px - 15vh);
       background: url(../../assets/img/st.png) no-repeat;
-      background-size: cover;
+      background-size: contain;
+      -webkit-transform: rotate(-15deg);
       transform: rotate(-15deg);
       top: 10px;
     }
   }
   .auth-title {
     margin: -80px 10px 10px 10px;
-    color: #bee9ff;
-    font-size: 36px;
+    color: lighten(#bee9ff, 8);
+    font-size: 40px;
     text-align: center;
+    text-shadow: 0 0 6px rgba(19, 58, 84, 0.8);
   }
   .form-control {
     padding: 15px 0;

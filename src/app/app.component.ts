@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 
 
 /**
+ * Модалка
+ * Шоп (переименовать)
+ *
  * https://www.pinterest.com/pin/252905335303842256/
  */
 @Component({

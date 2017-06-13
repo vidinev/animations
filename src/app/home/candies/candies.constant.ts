@@ -1,6 +1,6 @@
 export const candiesConstants = {
   firstStateName: 'top',
   lastStateName: 'bottom',
-  duration: 10000,
+  duration: 15000,
   count: 10
 };

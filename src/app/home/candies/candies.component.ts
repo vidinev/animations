@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {
   animate,
+  keyframes,
   state,
   style,
   transition,
@@ -21,9 +22,14 @@ const stateNames = CandiesService.getNames(fallCandyTrigger);
     fallCandyTrigger,
     trigger('rotateCandy', [
       state(firstStateName , style({transform: 'rotate(0deg)'})),
-      state(lastStateName , style({transform: 'rotate(360deg)'})),
+      state(lastStateName , style({transform: 'rotate(0deg)'})),
       transition(`${firstStateName} => ${lastStateName}`, [
-        animate('12s linear')
+        animate('8s linear', keyframes([
+          style({transform: 'rotate(-25deg)', offset: 0.25}),
+          style({transform: 'rotate(0deg)',  offset: 0.5}),
+          style({transform: 'rotate(25deg)', offset: 0.75}),
+          style({transform: 'rotate(0deg)',     offset: 1.0})
+        ]))
       ])
     ])
   ]
