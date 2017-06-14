@@ -40,6 +40,8 @@ import { animate, keyframes, state, style, transition, trigger } from '@angular/
 export class ModalComponent implements OnInit {
   opacityState = 'hidden';
   modalState = 'out';
+  name = '';
+  invalid = false;
   isSuccess = false;
   constructor() { }
 
@@ -69,6 +71,8 @@ export class ModalComponent implements OnInit {
 
   closeModal() {
     this.modalState = 'out';
+    this.name = '';
+    this.invalid = false;
   }
 
   showModal() {
@@ -77,11 +81,16 @@ export class ModalComponent implements OnInit {
 
   cancel() {
     this.modalState = 'shake';
+    this.invalid = true;
     setTimeout(() => this.modalState = 'in');
   }
 
   pay() {
-    this.modalState = 'rotate';
+    if (this.name) {
+      this.modalState = 'rotate';
+      return;
+    }
+    this.cancel();
   }
 
 }
