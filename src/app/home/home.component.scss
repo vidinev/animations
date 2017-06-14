@@ -4,19 +4,17 @@
   width: 100%;
 
   .main-title {
-    font-size: 85px;
+    font-size: 92px;
     text-align: center;
     letter-spacing: 0.075em;
     margin-top: -60px;
     color: darken(#184869, 5);
-    text-shadow: 0 0 8px transparentize(#2d92d5, .15);
     margin-bottom: 20px;
   }
   .sub-title {
-    font-size: 38px;
+    font-size: 48px;
     text-align: center;
     color: darken(#184869, 5);
-    text-shadow: 0 0 8px transparentize(#2d92d5, .15);
   }
   .main-title, .sub-title {
     > span {
@@ -28,6 +26,7 @@
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+    width: 70%;
     &.auth-open {
       width: 70%;
       float: right;
@@ -39,7 +38,7 @@
     cursor: pointer;
   }
   .auth-panel {
-    position: relative;
+    position: absolute;
     width: 30%;
     background: rgba(45, 146, 213, 0.7);
     height: 100vh;
@@ -74,7 +73,7 @@
   .auth-title {
     margin: -80px 10px 10px 10px;
     color: lighten(#bee9ff, 8);
-    font-size: 40px;
+    font-size: 48px;
     text-align: center;
     text-shadow: 0 0 6px rgba(19, 58, 84, 0.8);
   }

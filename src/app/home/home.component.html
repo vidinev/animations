@@ -24,9 +24,9 @@
     <a routerLink="/shop" class="fa fa-user-plus click-able icon-button"></a>
   </form>
 </div>
-<div class="wrapper">
-  <h1 class="main-title" >
-    <span [@flyIn]="global.titleState" *ngIf="global.titleState" (@flyIn.done)="showElement('subTitleState')">Котейки</span>
+<div class="wrapper" [@widthChange]="global.authOpen">
+  <h1 class="main-title">
+    <span [@flyIn]="global.titleState" *ngIf="global.titleState" (@flyIn.done)="showElement('subTitleState')">ВКотакте</span>
   </h1>
   <h4 class="sub-title" *ngIf="global.subTitleState">
   <span [@flyInLeft]="global.subTitleState" (@flyInLeft.done)="showElement('authButtonsState')">

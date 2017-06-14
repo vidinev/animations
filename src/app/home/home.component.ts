@@ -19,6 +19,13 @@ const animation = '280ms cubic-bezier(0.6,-0.1, 0.85, 1.3)';
         animate(animation)
       ])
     ]),
+    trigger('widthChange', [
+      state('out', style({transform: 'translateX(20%)'})),
+      state('in', style({transform: 'translateX(40%)'})),
+      transition('out <=> in', [
+        animate(animation)
+      ]),
+    ]),
     trigger('flyInLeft', [
       state('out', style({transform: 'translateX(-100%)', opacity: 0, display: 'none'})),
       state('in', style({transform: 'translateX(0)', opacity: 1})),
