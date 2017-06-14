@@ -16,11 +16,11 @@ export class ShopComponent implements OnInit {
   items = [];
 
   constructor() {
-    for (let i = 1; i < 15; i++) {
+    for (let i = 10; i > 0; i--) {
       this.items.push({
-        image: `assets/img/candy${i}.png`,
-        name: `Изделие #${i}`,
-        price: Math.round(Math.random() * 99) * 10
+        image: `assets/img/cat${i}.jpg`,
+        name: `Котяра #${i}`,
+        price: 'Одесса'
       });
     }
   }

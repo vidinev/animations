@@ -1,10 +1,12 @@
 <div *ngFor="let item of items" class="shop-item">
   <div class="item-inner">
-    <img [src]="item.image">
+    <div class="image-wrapper">
+      <img [src]="item.image">
+    </div>
     <div class="item-footer">
       <p class="item-name">{{item.name}}</p>
       <p class="item-price">{{item.price}}</p>
-      <div class="item-action"> <i class="fa fa-shopping-cart click-able"></i> </div>
+      <div class="item-action"> <i class="fa fa-user-plus click-able"></i> </div>
       <div class="clear"></div>
     </div>
   </div>

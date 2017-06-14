@@ -9,7 +9,7 @@ const routes: Routes = [
     component: HomeComponent,
     children: []
   }, {
-    path: 'shop',
+    path: 'friends',
     component: ShopComponent
   }
 ];

@@ -10,6 +10,17 @@
       text-decoration: none;
     }
   }
+  .page-title {
+    margin-left: 15%;
+    font-size: 48px;
+    color: #114c71;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    &.visible {
+      opacity: 1;
+    }
+  }
 
 
   .logo-wrapper {
